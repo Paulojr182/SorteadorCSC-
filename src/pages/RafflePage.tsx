@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { Play, RotateCcw, Maximize, Minimize, Trophy, Users, Volume2, VolumeX, FileText, Save } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { Play, RotateCcw, Maximize, Minimize, Trophy, Users, Volume2, VolumeX, FileText } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import type { Student } from '../types';
 import { cn } from '../utils/cn';
@@ -80,12 +80,7 @@ const RafflePage: React.FC = () => {
     return () => document.removeEventListener('fullscreenchange', handleFSChange);
   }, []);
 
-  // Available pool
-  const availablePool = useMemo(() => {
-    if (settings.allowRepeat) return students;
-    const previouslyWonIds = new Set(history.flatMap(h => h.winners.map(w => w.id)));
-    return students.filter(s => !previouslyWonIds.has(s.id));
-  }, [students, settings.allowRepeat, history]);
+// Available pool
 
   // Use memo hack since hooks can't conditional rely on deps unless written inline
   function getAvailablePool() {
@@ -328,7 +323,7 @@ const RafflePage: React.FC = () => {
                 "grid gap-6 mt-6 justify-center",
                 winners.length === 1 ? "grid-cols-1" : winners.length === 2 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
               )}>
-                {winners.map((winner, idx) => (
+                {winners.map((winner) => (
                   <div 
                     key={winner.id}
                     className={cn(

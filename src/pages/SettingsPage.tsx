@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Settings, Users, Repeat, Gauge, Timer, PlayCircle, Save } from 'lucide-react';
+import { Users, Repeat, Gauge, Timer, PlayCircle, Save } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import type { RaffleSettings } from '../types';
 

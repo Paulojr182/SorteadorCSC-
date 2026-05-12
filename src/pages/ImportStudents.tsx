@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { Upload, Trash2, Search, FileSpreadsheet, UserMinus, CheckCircle2 } from 'lucide-react';
+import { Trash2, Search, FileSpreadsheet, UserMinus, CheckCircle2 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import { useApp } from '../context/AppContext';
 import { parseStudentsFile } from '../services/fileService';

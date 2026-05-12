@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import type { Student, RaffleSettings, RaffleHistory, AppState } from '../types';
+import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import type { Student, RaffleSettings, RaffleHistory } from '../types';
 import { toast } from 'react-hot-toast';
 
 interface AppContextProps {
@@ -27,7 +27,7 @@ const defaultSettings: RaffleSettings = {
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
-const STORAGE_KEY = 'sorteador_app_state';
+// AppContext definition
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [students, setStudentsState] = useState<Student[]>([]);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { History, Trash2, FileText, ChevronDown, ChevronUp, Calendar, Users, Eye } from 'lucide-react';
+import { History, Trash2, FileText, ChevronDown, ChevronUp, Calendar, Users, Trophy } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import type { RaffleHistory } from '../types';
 import { cn } from '../utils/cn';

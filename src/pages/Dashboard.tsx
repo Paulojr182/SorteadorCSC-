@@ -162,7 +162,7 @@ const Dashboard: React.FC = () => {
                     </p>
                   </div>
                   <div className="flex -space-x-2 overflow-hidden">
-                    {item.winners.slice(0, 3).map((w, i) => (
+                    {item.winners.slice(0, 3).map((w) => (
                       <div key={w.id} className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900 border-2 border-white dark:border-zinc-800 flex items-center justify-center text-[10px] font-bold text-indigo-600 dark:text-indigo-300">
                         {w.name.charAt(0)}
                       </div>
